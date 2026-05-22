@@ -54,6 +54,10 @@ ipq40xx_setup_interfaces()
 	zte,mf289f)
 		ucidef_set_interfaces_lan_wan "lan" "wan"
 		;;
+	netgear,wac540)
+	    # Onder DSA heten de poorten lan1 en lan2, we bundelen ze samen op br-lan
+	    ucidef_set_interfaces_lan_wan "lan1 lan2" ""
+	    ;;
 	aruba,ap-303|\
 	aruba,ap-365|\
 	avm,fritzrepeater-1200|\
